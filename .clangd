@@ -1,0 +1,4 @@
+CompileFlags:
+  Compiler: C:/tools/msys64/mingw64/bin/gcc.exe
+  Add:
+    - -IC:/Users/vesko/Documents/Projects/Road to AI Engineer/AIEngineeringRoadmap/stage-01-cs-foundations/libcs50/src
