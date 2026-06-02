@@ -1,9 +1,11 @@
 def merge_sort(arr):
+
+    # Base case
     if len(arr) > 1:
         left_arr = arr[:len(arr)//2]
         right_arr = arr[len(arr)//2:]
 
-        # Recursion
+        # Recursion case
         merge_sort(left_arr)
         merge_sort(right_arr)
 
