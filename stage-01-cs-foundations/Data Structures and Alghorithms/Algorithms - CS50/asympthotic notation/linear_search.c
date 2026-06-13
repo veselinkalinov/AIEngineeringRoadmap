@@ -1,6 +1,7 @@
-#include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+
+// Replaced cs50 get_string dependency with standard C input
 
 // Big O(n)
 
@@ -19,10 +20,16 @@
 // }
 
 int main(void) {
-  string strings[] = {"battleship", "boot",    "cannon",
-                      "iron",       "thimble", "top hat"};
+  char *strings[] = {"battleship", "boot",    "cannon",
+                     "iron",       "thimble", "top hat"};
 
-  string s = get_string("String: ");
+  char s[100];
+  printf("String: ");
+  if (scanf("%99s", s) != 1) {
+    printf("Not found\n");
+    return 1;
+  }
+
   for (int i = 0; i < 6; i++) {
     if (strcmp(strings[i], s) == 0) {
       printf("Found\n");

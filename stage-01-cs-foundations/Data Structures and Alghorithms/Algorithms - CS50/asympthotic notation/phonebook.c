@@ -1,10 +1,9 @@
-#include <cs50.h>
 #include <stdio.h>
 #include <string.h>
 
 typedef struct {
-  string name;
-  string number;
+  char *name;
+  char *number;
 } Person;
 
 int main(void) {
@@ -18,9 +17,15 @@ int main(void) {
   people[2].name = "John";
   people[2].number = "+1-949-468-2750";
 
-  string name = get_string("Name: ");
+  char name[128];
+  printf("Name: ");
+  if (!fgets(name, sizeof name, stdin))
+    return 1;
+  // remove trailing newline
+  name[strcspn(name, "\n")] = '\0';
+
   for (int i = 0; i < 3; i++) {
-    if (strcmp(people[i].name, name)) {
+    if (strcmp(people[i].name, name) == 0) {
       printf("Found %s\n", people[i].number);
       return 0;
     }

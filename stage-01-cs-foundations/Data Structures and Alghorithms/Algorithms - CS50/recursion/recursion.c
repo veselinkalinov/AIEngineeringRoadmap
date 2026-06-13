@@ -1,15 +1,22 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void iterdraw(int n);
 void recursivedraw(int n);
 
 int main(void) {
-  int height = get_int("Height: ");
+  int height = 0;
+
+  printf("Height: ");
+  if (scanf("%d", &height) != 1) {
+    return 1;
+  }
 
   iterdraw(height);
   printf("\n");
   recursivedraw(height);
+
+  return 0;
 }
 
 // Iterative Func:

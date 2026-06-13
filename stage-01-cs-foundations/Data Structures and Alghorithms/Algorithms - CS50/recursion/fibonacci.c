@@ -1,11 +1,11 @@
-#include <cs50.h>
 #include <stdio.h>
-
 
 int fib(int n);
 
 int main(void) {
-  int n = get_int("Fibonacci number: ");
+  int n;
+  printf("Fibonacci number: ");
+  scanf("%i", &n);
   printf("The %ith Fibonacci number is %i\n", n, fib(n));
 }
 
