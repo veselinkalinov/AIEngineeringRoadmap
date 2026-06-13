@@ -1,20 +1,16 @@
-my_list = [8, 15, 4, 2]
+my_list = [4, 8, 2, 15]
 
 
 def swap(input_list, index_1, index_2):
-    # Using temp so we don't lose the original value at index_1
-    temp = input_list[index_1]
-    input_list[index_1] = input_list[index_2]
-    input_list[index_2] = temp
-    return input_list  # Make sure to return the swapped list
+    input_list[index_1], input_list[index_2] = input_list[index_2], input_list[index_1]
+    return input_list
 
 
-for j in range(len(my_list)):
-    lowest_index = j  # Lowest index now starts at j
-    for i in range(j, len(my_list)):  # i now starts at j rather than 0
-        if my_list[i] < my_list[lowest_index]:
-            lowest_index = i
-    # Swapping with position j rather than 0
-    my_list = swap(my_list, lowest_index, j)
+for i in range(len(my_list)):
+    lowest_index = i
+    for j in range(i, len(my_list)):
+        if my_list[j] < my_list[lowest_index]:
+            my_list = swap(my_list, j, i)
+            break
 
 print(my_list)
