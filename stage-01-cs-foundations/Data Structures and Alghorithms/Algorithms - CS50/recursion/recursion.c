@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void iterdraw(int n);
 void recursivedraw(int n);
