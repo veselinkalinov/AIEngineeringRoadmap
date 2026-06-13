@@ -1,6 +1,3 @@
-# Selection Sort I 📶
-# Codédex
-
 my_list = [8, 15, 4, 2]
 
 
