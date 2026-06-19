@@ -14,5 +14,6 @@
     "clangd.arguments": [
         "--query-driver=C:/tools/msys64/mingw64/bin/gcc.exe,C:/tools/msys64/mingw64/bin/g++.exe"
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.REPL.enableREPLSmartSend": false
 }
