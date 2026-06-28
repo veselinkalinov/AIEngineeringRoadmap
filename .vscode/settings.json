@@ -1,5 +1,5 @@
 {
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "C_Cpp.default.compilerPath": "C:/tools/msys64/mingw64/bin/gcc.exe",
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.cppStandard": "c++17",
