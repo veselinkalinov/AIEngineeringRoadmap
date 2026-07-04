@@ -1,5 +1,6 @@
 import sys
 
+# pyrefly: ignore [missing-import]
 from PIL import Image
 
 images = []
