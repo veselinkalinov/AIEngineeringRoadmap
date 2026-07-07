@@ -71,7 +71,7 @@ if ($candidateSourceFile -and (Test-Path -LiteralPath $candidateSourceFile) -and
 }
 
 if (-not $resolvedSourceFile) {
-    $defaultSearchFile = Join-Path $PSScriptRoot "AIEngineeringRoadmap\stage-01-cs-foundations\Algorithms - CS50\search.c"
+    $defaultSearchFile = Join-Path $PSScriptRoot "stage-01-cs-foundations\Algorithms - CS50\search.c"
     if (Test-Path -LiteralPath $defaultSearchFile) {
         $resolvedSourceFile = $defaultSearchFile
     }
