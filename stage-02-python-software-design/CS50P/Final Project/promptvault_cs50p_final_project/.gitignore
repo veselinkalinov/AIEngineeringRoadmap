@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+prompt_library.json
+video_demo.json
+*.tmp
+exports/

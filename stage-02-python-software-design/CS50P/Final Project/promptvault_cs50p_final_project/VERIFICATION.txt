@@ -1,0 +1,114 @@
+PromptVault final verification report
+Generated: 2026-07-20
+Environment: Linux, Python 3.13.5
+
+PROJECT-CONTROLLED CHECKS
+
+1. Automated tests in the host environment
+   Command: python -m pytest
+   Result: PASS
+   Output: 31 collected, 31 passed in 0.11s
+
+2. Compilation
+   Command: python -m compileall -f .
+   Result: PASS
+   Output confirmed that project.py and test_project.py compiled successfully.
+
+3. Dependency installation in a clean virtual environment
+   Commands:
+     python -m venv /tmp/promptvault_verify_venv
+     /tmp/promptvault_verify_venv/bin/python -m pip install -r requirements.txt
+   Result: PASS
+   Installed pytest 9.1.1 and its dependencies from requirements.txt.
+
+4. Automated tests in the clean virtual environment
+   Command: /tmp/promptvault_verify_venv/bin/python -m pytest
+   Result: PASS
+   Output: 31 collected, 31 passed in 0.08s
+
+5. Clean virtual-environment dependency check
+   Command: /tmp/promptvault_verify_venv/bin/python -m pip check
+   Result: PASS
+   Output: No broken requirements found.
+
+6. CLI startup and help
+   Command: python project.py --help
+   Result: PASS
+   The help output listed add, list, show, edit, analyze, suggest, compare,
+   stats, export, delete, and template commands.
+
+7. Isolated realistic workflow
+   Commands exercised separate Python processes with a temporary JSON library:
+     add
+     template --save-title
+     list --query --sort
+     analyze --id
+     suggest --id
+     edit
+     show
+     compare
+     stats
+     export
+     invalid edit with no changes
+     delete --yes
+     list after deletion
+     list with a missing library file
+   Result: PASS
+   Observed behavior:
+     - Records persisted across separate executions.
+     - Search and score sorting returned the expected records.
+     - Editing preserved the record ID and updated the score.
+     - The Markdown report was created and was non-empty.
+     - The invalid edit returned exit status 1 with a readable error.
+     - Deletion persisted.
+     - A missing library file was handled as an empty library.
+
+8. Required structure and README
+   Method: Python AST and file inspection
+   Result: PASS
+   Observations:
+     - Required root files were present.
+     - A module-level main function was present.
+     - 35 additional module-level functions were present.
+     - At least seven public functions had exact test_<function> matches.
+     - The executable __main__ entry point was present.
+     - README.md contained 1,781 words.
+     - README.md contained exactly one required literal video placeholder:
+       <ADD VIDEO URL AFTER RECORDING>
+
+9. Dependency mapping
+   Method: Python AST import inspection plus requirements.txt inspection
+   Result: PASS
+   Observations:
+     - The only third-party import was pytest.
+     - requirements.txt contained only pytest>=8.0,<10.0.
+     - Runtime code used only the Python standard library.
+
+10. Credential and stale-placeholder scan
+    Method: recursive pattern scan for common private-key, access-key, token,
+    and old fake-video-URL patterns
+    Result: PASS
+    Output: No credential-like patterns or stale fake video URL found.
+
+ENVIRONMENTAL OBSERVATION
+
+A separate `python -m pip check` in the shared host environment reported an
+unrelated pre-existing conflict: moviepy 2.2.1 requires pillow below 12, while
+the host has pillow 12.2.0. PromptVault imports neither package. The clean
+PromptVault virtual environment installed only the declared requirements and
+passed `pip check`, so this host-level conflict is not a PromptVault defect.
+
+MANUAL ACTIONS NOT PERFORMED
+
+- Student code review and practice demonstration
+- Inserting personal opening-screen values
+- Recording and reviewing the video
+- Uploading the video
+- Replacing the README video placeholder with the real URL
+- Completing the CS50 submission form
+- Running submit50 against the external CS50 service
+- Opening the CS50P gradebook
+
+FINAL STATUS
+
+PROJECT-CONTROLLED WORK COMPLETE
