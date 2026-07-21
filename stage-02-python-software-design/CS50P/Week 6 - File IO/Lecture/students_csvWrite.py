@@ -1,10 +1,13 @@
 import csv
+from pathlib import Path
 
 name = input("What's your name? ")
 home = input("Where's your home? ")
+# Legacy path: C:\Projects\Road to AI Engineer\...\Lecture\students_write.csv
+students_file = Path(__file__).with_name("students_write.csv")
 
 with open(
-    "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Lecture\students_write.csv",
+    students_file,
     "a",
 ) as file:
     writer = csv.DictWriter(file, fieldnames=["name", "home"])

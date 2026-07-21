@@ -1,0 +1,27 @@
+name: PromptVault tests
+
+on:
+  push:
+    paths:
+      - "stage-02-python-software-design/CS50P/Final Project/promptvault_cs50p_final_project/**"
+      - ".github/workflows/promptvault-tests.yml"
+  pull_request:
+    paths:
+      - "stage-02-python-software-design/CS50P/Final Project/promptvault_cs50p_final_project/**"
+      - ".github/workflows/promptvault-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: stage-02-python-software-design/CS50P/Final Project/promptvault_cs50p_final_project
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: stage-02-python-software-design/CS50P/Final Project/promptvault_cs50p_final_project/requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q

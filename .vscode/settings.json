@@ -1,23 +1,23 @@
 {
-    "editor.lightbulb.enabled": "off",
-    "C_Cpp.default.compilerPath": "C:/tools/msys64/mingw64/bin/gcc.exe",
+    "C_Cpp.default.compilerPath": "gcc.exe",
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
-    "code-runner.runInTerminal": true,
-    "code-runner.saveAllFilesBeforeRun": true,
-    "code-runner.executorMap": {
-        "c": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\vesko\\Documents\\Projects\\Road to AI Engineer\\run-c.ps1\""
-    },
-    "code-runner.executorMapByFileExtension": {
-        ".c": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\vesko\\Documents\\Projects\\Road to AI Engineer\\run-c.ps1\""
-    },
     "clangd.arguments": [
-        "--query-driver=C:/tools/msys64/mingw64/bin/gcc.exe,C:/tools/msys64/mingw64/bin/g++.exe"
+        "--query-driver=**/gcc.exe,**/g++.exe"
     ],
     "git.ignoreLimitWarning": true,
-    "python.REPL.enableREPLSmartSend": false,
-    "python.defaultInterpreterPath": "C:\\Python314\\python.exe",
-    "python-envs.defaultEnvManager": "ms-python.python:system",
-    "wolf.disableHotModeWarning": true
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "files.exclude": {
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/__pycache__": true
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/venv": true,
+        "**/node_modules": true,
+        "**/.next": true
+    }
 }

@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 # name = input("Whats your name? ")
 
 # with open(
@@ -9,9 +12,10 @@
 # file.close()
 
 names = []
+names_file = Path(__file__).with_name(" names.txt")
 
 with open(
-    "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Lecture\ names.txt",
+    names_file,
     "r",
 ) as file:
     for line in file:  # or sorted(file) and directly print line.strip()/,end=""

@@ -2,6 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "C: syntax-check current file",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-fsyntax-only",
+        "${file}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
       "label": "Run current C file",
       "type": "shell",
       "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -13,10 +27,7 @@
         "${workspaceFolder}\\run-c.ps1",
         "${file}"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "presentation": {
         "reveal": "always",
         "panel": "shared",
@@ -39,6 +50,36 @@
       ],
       "group": "build",
       "problemMatcher": "$gcc"
+    },
+    {
+      "label": "PromptVault: tests",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/stage-02-python-software-design/CS50P/Final Project/promptvault_cs50p_final_project"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "AIPO: backend tests",
+      "type": "shell",
+      "command": "${workspaceFolder:AIPO}/backend/venv/Scripts/python.exe",
+      "args": [
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder:AIPO}/backend"
+      },
+      "group": "test",
+      "problemMatcher": []
     }
   ]
 }

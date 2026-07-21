@@ -2,18 +2,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run current C file",
-      "type": "cppdbg",
+      "name": "Python: current file",
+      "type": "debugpy",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:\\tools\\msys64\\mingw64\\bin\\gdb.exe",
-      "preLaunchTask": "Build current C file"
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
     }
   ]
 }

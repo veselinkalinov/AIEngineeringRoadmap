@@ -1,28 +1,25 @@
 # pyrefly: ignore [missing-import]
+from pathlib import Path
+
 from PIL import Image, ImageFilter
 
 
 def main():
-    with Image.open(
-        "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Shorts\Pillow\in.jpeg"
-    ) as img:
+    # Legacy input/output paths used C:\Projects\Road to AI Engineer\...\Pillow\.
+    image_dir = Path(__file__).parent
+
+    with Image.open(image_dir / "in.jpeg") as img:
         print(img.size)
         print(img.format)
 
         image_blur = img.filter(ImageFilter.BLUR)
-        image_blur.save(
-            "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Shorts\Pillow\image_blur.jpeg"
-        )
+        image_blur.save(image_dir / "image_blur.jpeg")
 
         image_edges = img.filter(ImageFilter.FIND_EDGES)
-        image_edges.save(
-            "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Shorts\Pillow\image_edges.jpeg"
-        )
+        image_edges.save(image_dir / "image_edges.jpeg")
 
         image_rotate = img.rotate(180)
-        image_rotate.save(
-            "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Shorts\Pillow\image_rotate.jpeg"
-        )
+        image_rotate.save(image_dir / "image_rotate.jpeg")
 
 
 if __name__ == "__main__":

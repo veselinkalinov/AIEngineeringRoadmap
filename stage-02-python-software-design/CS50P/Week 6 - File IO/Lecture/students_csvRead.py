@@ -1,9 +1,12 @@
 import csv
+from pathlib import Path
 
 students = []
+# Legacy path: C:\Projects\Road to AI Engineer\...\Lecture\students_read.csv
+students_file = Path(__file__).with_name("students_read.csv")
 
 with open(
-    "C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 6 - File IO\Lecture\students_read.csv"
+    students_file
 ) as file:
     reader = csv.DictReader(file)
     for row in reader:

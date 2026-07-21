@@ -8,10 +8,15 @@ env/
 dist/
 build/
 *.egg
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
+# Source notebooks are tracked; only generated checkpoints are ignored.
 
 # Environment
 .env
@@ -23,9 +28,24 @@ build/
 Thumbs.db
 
 # Editor
-.vscode/
+.vscode/*
+!.vscode/c_cpp_properties.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
 .idea/
 *.swp
+
+# Native build outputs
+*.exe
+*.o
+*.obj
+
+# JavaScript
+node_modules/
+.next/
+coverage/
 
 # Personal
 /AI Weekly Log.txt

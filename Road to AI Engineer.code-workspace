@@ -1,10 +1,32 @@
 {
 	"folders": [
 		{
+			"name": "Road to AI Engineer",
 			"path": "."
+		},
+		{
+			"name": "AIPO",
+			"path": "../aiprompts-optimizer"
+		},
+		{
+			"name": "WC2026 Predictor",
+			"path": "../wc2026-predictor"
 		}
     ],
     "settings": {
-        "git.ignoreLimitWarning": true
+        "git.ignoreLimitWarning": true,
+        "files.exclude": {
+            "**/.mypy_cache": true,
+            "**/.pytest_cache": true,
+            "**/.ruff_cache": true,
+            "**/__pycache__": true
+        },
+        "search.exclude": {
+            "**/.venv": true,
+            "**/venv": true,
+            "**/node_modules": true,
+            "**/.next": true,
+            "**/catboost_info": true
+        }
     }
 }

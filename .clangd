@@ -1,5 +1,2 @@
 CompileFlags:
-  Compiler: C:/tools/msys64/mingw64/bin/gcc.exe
-  Add:
-    - -Ilibcs50/src
-    - -IC:/Users/vesko/Documents/Projects/Road to AI Engineer/libcs50/src
+  Compiler: gcc

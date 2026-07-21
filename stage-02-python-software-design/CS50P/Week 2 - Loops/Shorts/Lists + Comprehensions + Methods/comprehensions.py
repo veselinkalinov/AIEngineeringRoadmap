@@ -1,11 +1,12 @@
 import csv
 import os
+from pathlib import Path
 
 
 def main():
     counts = {}
-    words = get_words(
-        r"C:\Projects\Road to AI Engineer\stage-02-python-software-design\CS50P\Week 2 - Loops\Shorts\Lists\address.txt")
+    # Legacy path: C:\Projects\Road to AI Engineer\...\Lists\address.txt
+    words = get_words(Path(__file__).with_name("address.txt"))
 
     # List Comprehension
     lowercase_words = [word.lower() for word in words if len(word) > 4]
@@ -25,7 +26,7 @@ def main():
     save_counts(counts)
 
 
-def get_words(file_path: str) -> list[str]:
+def get_words(file_path: str | Path) -> list[str]:
     with open(file_path, "r", encoding="utf-8") as file:
         return file.read().split()
 
