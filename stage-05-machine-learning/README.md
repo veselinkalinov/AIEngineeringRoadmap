@@ -1,5 +1,9 @@
 # Stage 05 — Machine Learning
 
+## Active Course
+
+**[CS50's Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/)** is the current primary course from 2026-07-21 through 2026-08-24. Work lives in `CS50AI/`. Complete its lectures and projects before the later Google Machine Learning Crash Course and practical ML blocks.
+
 > Every AI engineer using models without understanding them
 > is one bug away from being completely lost.
 > Start with theory. Build from scratch. Then use the libraries.

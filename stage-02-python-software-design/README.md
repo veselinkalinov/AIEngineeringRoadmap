@@ -1,5 +1,11 @@
 # Stage 02 — Python & Software Design
 
+## Current Status
+
+- CS50P: completed on 2026-07-20, including the PromptVault final project and certificate.
+- ArjanCodes Software Design in Python: required videos continue on the dates assigned in the Life OS calendar.
+- Active notes: `notes/arjancodes.md`.
+
 > Python is the language of AI.
 > But knowing syntax isn't the goal — writing code that doesn't fall apart when your project grows is.
 > CS50P gives you the foundation. ArjanCodes gives you the engineering mindset.

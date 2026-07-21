@@ -1,5 +1,9 @@
 # Stage 03 — Data Structures & Algorithms
 
+## Current Status
+
+The dedicated DSA curriculum is no longer active. Existing Boot.dev, Codédex, CS50, and Educative material remains here as historical work and reference. New practice is self-directed through LeetCode under `leetcode/`; there is no required linear checklist or additional DSA course sequence.
+
 > Every system that scales does so because the person who built it understood
 > how data moves through memory and how algorithms behave at scale.
 > You don't need to memorize interview puzzles. You need to understand the fundamentals.
