@@ -1,37 +1,31 @@
 # Current Work
 
-Last aligned with the Life OS calendar: 2026-07-21.
+Last aligned with the Life OS calendar: 2026-07-23.
 
 ## Today
 
-- Roadmap item: CS50 AI Week 0 - Search.
-- Project or course: CS50's Introduction to Artificial Intelligence with Python.
-- Repository path: `stage-05-machine-learning/CS50AI/`.
-- Concrete task: Watch the Search lecture sections on search problems, DFS, BFS, greedy best-first search, A*, minimax, and alpha-beta pruning. Complete the comparison table in `notes/week-0-search.md`.
-- Estimated time: 3 hours.
-- Expected output: Completed lecture notes and a comparison table covering frontier strategy, completeness, optimality, and a suitable use case.
-- Verification command: `git diff --check`.
-- Completion criterion: Every lecture section is covered and every row in the comparison table contains an explanation in your own words.
+- Roadmap item: Scientific Python - Codédex NumPy foundations.
+- Project or course: Codédex NumPy.
+- Repository path: `C:\Projects\Road to AI Engineer\stage-04-data-scientific-python\numpy\`.
+- Concrete task: Complete the introductory array, shape, dtype, indexing, and slicing exercises. Reproduce every example in a local notebook and add two assertions that verify expected array shapes.
+- Estimated time: Primary block within the 5-hour day.
+- Expected output: A NumPy foundations notebook containing the completed exercises and two passing shape assertions.
+- Verification command: Restart the notebook kernel, run all cells, confirm both assertions pass, then run `git diff --check`.
+- Completion criterion: Every assigned Codédex exercise is complete, the notebook runs from top to bottom, and both shape assertions pass.
 
-## Optional Secondary Task
+## Secondary Tasks
 
-- Task: Continue AIPO Milestone 5 with the smallest idempotent RAG source-record persistence slice. Use synthetic governed fixtures and the validated local schema; do not begin embedding persistence until the 384-dimensional model decision is recorded.
-- Repository path: `../aiprompts-optimizer/`.
-- Expected output: A focused code diff plus backend tests, or an explicit blocker recorded in that project's `docs/PROJECT_STATUS.md`.
-
-## Supporting Tasks
-
-- Record one concrete engineering implication from ArjanCodes, "You Don't Need That Design Pattern," in `stage-02-python-software-design/notes/arjancodes.md`.
-- Check Google AI Essentials access using the TU Sofia account; record whether access is institutional, financial-aid based, or paid.
-- Study `../wc2026-predictor/wc2026-files/curriculum/06-prediction-runtime.md`, or record a missing-path blocker.
+- AIPO: Select a zero-cost embedding model compatible with `vector(384)`, or record the required schema migration, then start the stale-embedding persistence test. Work in `C:\Projects\aiprompts-optimizer\` and begin from `C:\Projects\aiprompts-optimizer\docs\PROJECT_STATUS.md`.
+- Software-design video: Watch "Your REST API Needs Webhooks" and record one engineering implication in `C:\Projects\Road to AI Engineer\stage-02-python-software-design\notes\arjancodes.md`.
+- WC2026 Predictor: Study `C:\Projects\wc2026-predictor\wc2026-files\curriculum\06-prediction-runtime.md` for 45 minutes.
 
 ## Current Blockers
 
-- No CS50 AI distribution code has been downloaded yet. This does not block today's lecture task.
-- AIPO persistence integration tests require Docker Desktop and the local Supabase database.
-- The WC2026 Predictor repository contains existing uncommitted dataset changes; do not reset, clean, or include them in this repository's commits.
+- The NumPy work-unit folder may not exist yet. Create it only when beginning the task; do not generate future course folders in advance.
+- AIPO persistence integration may require Docker Desktop and the local Supabase database.
 
 ## Next Task
 
-- Task: Download the official CS50 AI Week 0 Degrees distribution code, preserve its required filenames, trace the data model, and document the shortest-path requirements before implementation.
-- Repository path: `stage-05-machine-learning/CS50AI/projects/degrees/` after the official distribution is downloaded.
+- Task: Complete Codédex NumPy vectorized arithmetic, aggregations, reshaping, and broadcasting exercises; compare one vectorized operation with a Python loop.
+- Repository path: `C:\Projects\Road to AI Engineer\stage-04-data-scientific-python\numpy\`.
+- Expected output: A vectorization notebook with completed exercises and one loop-versus-vectorized comparison.
