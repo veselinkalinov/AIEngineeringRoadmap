@@ -1,5 +1,4 @@
 # PromptVault
-#### Video Demo: <ADD VIDEO URL AFTER RECORDING>
 #### Description:
 
 PromptVault is a command-line tool for storing, analyzing, and comparing prompts for AI systems. It's my CS50P final project, written in Python, and it runs entirely offline — no API key, no account, no external database. Everything lives in a local JSON file you can open and read yourself.
