@@ -1,10 +1,10 @@
-import json
+import json  # noqa: F401
 
 import requests
-from django.http import HttpResponse
-from django.http.response import JsonResponse
-from django.shortcuts import redirect, render
-from django.views.generic import TemplateView
+from django.http import HttpResponse  # noqa: F401
+from django.http.response import JsonResponse  # noqa: F401
+from django.shortcuts import redirect, render  # noqa: F401
+from django.views.generic import TemplateView  # noqa: F401
 
 headers = {
     "Content-Type": "application/json",
